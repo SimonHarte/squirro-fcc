@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rating should render correctly 1`] = `
+<fieldset>
+  <legend
+    className="vh"
+  >
+    Rating (
+    2
+    )
+  </legend>
+  <div
+    className="stars"
+  >
+    <input
+      className="vh star"
+      id="Test Store-rating0"
+      key="Test Store-rating0"
+      name="Test Store-rating"
+      onChange={[MockFunction]}
+      type="radio"
+      value={5}
+    />
+    <label
+      className="label"
+      htmlFor="Test Store-rating0"
+    >
+      <span
+        className="vh"
+      >
+        5
+      </span>
+    </label>
+    <input
+      className="vh star star_current"
+      id="Test Store-rating1"
+      key="Test Store-rating1"
+      name="Test Store-rating"
+      onChange={[MockFunction]}
+      type="radio"
+      value={4}
+    />
+    <label
+      className="label"
+      htmlFor="Test Store-rating1"
+    >
+      <span
+        className="vh"
+      >
+        4
+      </span>
+    </label>
+    <input
+      className="vh star"
+      id="Test Store-rating2"
+      key="Test Store-rating2"
+      name="Test Store-rating"
+      onChange={[MockFunction]}
+      type="radio"
+      value={3}
+    />
+    <label
+      className="label"
+      htmlFor="Test Store-rating2"
+    >
+      <span
+        className="vh"
+      >
+        3
+      </span>
+    </label>
+    <input
+      className="vh star"
+      id="Test Store-rating3"
+      key="Test Store-rating3"
+      name="Test Store-rating"
+      onChange={[MockFunction]}
+      type="radio"
+      value={2}
+    />
+    <label
+      className="label"
+      htmlFor="Test Store-rating3"
+    >
+      <span
+        className="vh"
+      >
+        2
+      </span>
+    </label>
+    <input
+      className="vh star"
+      id="Test Store-rating4"
+      key="Test Store-rating4"
+      name="Test Store-rating"
+      onChange={[MockFunction]}
+      type="radio"
+      value={1}
+    />
+    <label
+      className="label"
+      htmlFor="Test Store-rating4"
+    >
+      <span
+        className="vh"
+      >
+        1
+      </span>
+    </label>
+  </div>
+</fieldset>
+`;

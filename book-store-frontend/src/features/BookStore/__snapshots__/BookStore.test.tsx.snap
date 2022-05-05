@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BookStore should render correctly 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="detailsWrapper"
+  >
+    <div
+      className="imageWrapper"
+    >
+      <div
+        className="imageFrame"
+      >
+        <img
+          alt="Test Store"
+          className="image"
+          src="imageSrc"
+        />
+      </div>
+    </div>
+    <div
+      className="details"
+    >
+      <div
+        className="header"
+      >
+        <h2
+          className="title"
+        >
+          Test Store
+        </h2>
+        <Rating
+          currentRating={3}
+          onAddRating={[Function]}
+          storeName="Test Store"
+        />
+      </div>
+      <Bestseller
+        books={Array []}
+      />
+    </div>
+  </div>
+  <div
+    className="footer"
+  >
+    <StoreMeta
+      date="1990-04-30T22:00:00.000Z"
+      website="http://store-website.com"
+    />
+    <CountryFlag
+      id="CH"
+    />
+  </div>
+</div>
+`;

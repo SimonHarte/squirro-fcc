@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CountryFlag should render correctly 1`] = `
+<img
+  alt="CH"
+  className="flag"
+  src="https://countryflagsapi.com/png/CH"
+/>
+`;
+
+exports[`CountryFlag should render correctly without code 1`] = `""`;

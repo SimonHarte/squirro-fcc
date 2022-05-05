@@ -1,0 +1,84 @@
+@import "../../styles/variables.scss";
+@import "../../styles/helpers.scss";
+
+.wrapper {
+  overflow: hidden;
+  border: 1px solid gray;
+  box-shadow: 1px 2px 5px gray;
+  border-radius: $spacing-base * 2;
+
+  @include responsive {
+    padding: $spacing-base * 3;
+  }
+}
+
+.detailsWrapper {
+  display: flex;
+  flex-direction: column;
+
+  @include responsive {
+    flex-direction: row;
+  }
+}
+
+.imageWrapper {
+  flex: none;
+  overflow: hidden;
+
+  @include responsive {
+    width: 30%;
+    border-radius: $spacing-base * 2;
+  }
+}
+
+.imageFrame {
+  position: relative;
+  padding-bottom: 56.25%;
+
+  @include responsive {
+    padding-bottom: 100%;
+  }
+}
+
+.image {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.details {
+  flex: 1;
+  margin: $spacing-base * 3;
+
+  @include responsive {
+    margin: 0 0 0 $spacing-base * 3;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-weight: bold;
+
+  @include responsive {
+    font-size: 1.5rem;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: $spacing-base * 2;
+  margin: 0 ($spacing-base * 3) ($spacing-base * 3);
+
+  @include responsive {
+    margin: ($spacing-base * 3) 0 0;
+  }
+}

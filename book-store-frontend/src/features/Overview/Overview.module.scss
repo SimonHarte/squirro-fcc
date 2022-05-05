@@ -1,0 +1,11 @@
+@import "../../styles/variables.scss";
+
+.wrapper {
+  max-width: $content-max-width;
+  margin: 0 auto;
+  padding: $spacing-base * 4;
+}
+
+.store + .store {
+  margin-top: $spacing-base * 3;
+}

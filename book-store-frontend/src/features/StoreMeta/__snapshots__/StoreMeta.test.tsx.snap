@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StoreMeta should render correctly 1`] = `
+<div>
+  <time
+    dateTime="1990-04-30T22:00:00.000Z"
+  >
+    01.05.1990
+  </time>
+  <span
+    className="divider"
+  >
+    -
+  </span>
+  <a
+    className="link"
+    href="http://test-site.com"
+  >
+    http://test-site.com
+  </a>
+</div>
+`;

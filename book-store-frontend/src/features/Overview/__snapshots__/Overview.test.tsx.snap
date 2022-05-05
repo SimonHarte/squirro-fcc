@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Overview should render correctly 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="store"
+    key="1"
+  >
+    <BookStore
+      books={
+        Array [
+          "1",
+          "2",
+          "8",
+        ]
+      }
+      countryId="1"
+      establishmentDate="1995-02-09T00:00:00+0000"
+      id="1"
+      name="MicroBooks"
+      rating={4}
+      storeImage="https://i.pinimg.com/736x/51/a2/47/51a247e0d1785b89b70a17a1c8f31ac5--melbourne-australia-second-hand.jpg"
+      website="https://www.micro-books-store.com"
+    />
+  </div>
+  <div
+    className="store"
+    key="2"
+  >
+    <BookStore
+      books={
+        Array [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+        ]
+      }
+      countryId="3"
+      establishmentDate="2011-01-17T00:00:00+0000"
+      id="2"
+      name="SquirroBooks"
+      rating={5}
+      storeImage="https://i.ytimg.com/vi/g-5A1EJ4KMg/maxresdefault.jpg"
+      website="https://www.squirro.com"
+    />
+  </div>
+  <div
+    className="store"
+    key="3"
+  >
+    <BookStore
+      books={
+        Array [
+          "4",
+        ]
+      }
+      countryId="1"
+      establishmentDate="1971-10-10T00:00:00+0000"
+      id="3"
+      name="CryptoBook"
+      rating={3}
+      storeImage="https://www.crypto-news-flash.com/wp-content/uploads/2020/11/Bitcoin-Store.png"
+      website="https://www.crypto-book-store.com"
+    />
+  </div>
+  <div
+    className="store"
+    key="4"
+  >
+    <BookStore
+      books={Array []}
+      countryId="2"
+      establishmentDate="1988-10-10T00:00:00+0000"
+      id="4"
+      name="ChipzStore"
+      rating={5}
+      storeImage="http://3.bp.blogspot.com/-3ofq2Hhzjs4/UhRo3UMXiBI/AAAAAAAAGeQ/Z_1wag7ouyI/s1600/empty+shelves.jpg"
+      website="https://www.chipz-store-books.com"
+    />
+  </div>
+</div>
+`;

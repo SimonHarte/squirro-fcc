@@ -1,0 +1,45 @@
+@import "../../styles/variables.scss";
+@import "../../styles/helpers.scss";
+
+.stars {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: $spacing-base;
+}
+
+.star {
+  &_current {
+    ~ .label {
+      color: orange;
+    }
+  }
+  &:focus {
+    ~ .label {
+      color: gold;
+    }
+  }
+}
+
+.label {
+  color: gray;
+  cursor: pointer;
+
+  &::before {
+    content: "★";
+    display: block;
+    font-size: 1.5rem;
+    line-height: 1ch;
+  }
+
+  &:hover {
+    color: gold;
+
+    ~ .label {
+      color: gold;
+    }
+  }
+}
+
+.vh {
+  @include visually-hidden;
+}

@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should format ISO date to common readable 1`] = `"01.05.1990"`;

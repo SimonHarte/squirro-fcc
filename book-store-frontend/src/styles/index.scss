@@ -1,0 +1,9 @@
+@import "./variables.scss";
+
+body {
+  margin: 0;
+  min-width: $content-min-width;
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

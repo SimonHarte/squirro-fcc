@@ -1,0 +1,9 @@
+{
+  "api": {
+    "url": "http://localhost",
+    "port": 8080
+  },
+  "countryFlags": {
+    "url": "https://countryflagsapi.com/png/"
+  }
+}

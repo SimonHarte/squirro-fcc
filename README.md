@@ -1,81 +1,56 @@
-## Squirro Frontend Coding Challenge
+# Squirro Frontend Coding Challenge
 
-Welcome to the Squirro coding challenge! Your task is to create an APP that lists the best selling books for each book store. 
+This repository contains my solution for the Squirro FCC (https://github.com/squirro/frontend-coding-challenge).
+While you will find the original fake API (slightly modified) under [book-store-api](book-store-api/), my implemenation is a react app under [book-store-frontend](book-store-frontend/).
+To get everything up and running simply execute these two steps in different terminal windows:
 
-This repo contains a JSON:API based application which provides the data for the book stores. This API can be found in the `book-store-api` folder. Within the section below you will find more information on how to run/use `book-store-api`.
+```
+cd book-store-api; npm i && npm start
 
-Your goal is to present the data (that you receive from the API) as shown in the wireframe:
+cd book-store-frontend; npm i && npm start
+```
 
-![Screenshot](wireframe.png)
+> Note that I myself used yarn instead of npm
 
+## Frontend Architecture
 
+### API Communication
 
-#### Each circle marker represents specific task:
-1. Circle with the Book store image.
-2. List with a maximum of 2 books ordered by the number of copies sold. In case that there are no books, please display a "No data available" message.
-3. Book store rating represented in stars. The interaction with the rating should update it's correspondent entry in the API.
-4. Book store establishment date in DD/MM/YYYY format and website link. The API will return the date in ISO 8601 format.
-5. Book store country flag image. The Book store API will only return a 2-letter ISO 3166-1 country code. Please use https://restcountries.eu/ API to get the flag image for each country code to display. 
+My implementation relies on React's [createAPI](https://redux-toolkit.js.org/rtk-query/api/createApi) feature to communicate with the provided API.
+You will find everything related to this in the [app folder](book-store-frontend/src/app/).
 
-**You should follow the wireframe positioning of elements, but you can make it a bit prettier ;)**
+### Shared Configuration
 
-### Book Store API
+I extracted the static data from the API's index.js into a JSON file and defined some endpoints configuration as well, which is used by both the API and React app.
+These files are located under [config](book-store-frontend/src/config/).
 
-JSON:API is a specification on how a client should perform requests that fetch or modify resources, and how a server should respond to those requests.
-You can find the JSON:API documentation on this link https://jsonapi.org/format/ but we will explain you some of the basics here to make it easier for you. 
+### Features
 
-The Book store API contains the `stores`, `books`, `countries` and `authors` resources. Each of the resources can have a attributes object and a relationships object describing relationships between the resource and other resources.
+I have sectioned the UI components into the following features:
 
-**Breakdown of resources and their relationships:** 
+- Overview
+- BookStore
+- Bestseller
+- Rating
+- StoreMeta
+- CountryFlag
 
-- Stores
-    - Attributes:
-        - `name`
-        - `website`
-        - `rating`
-        - `image`
-        - `establishmentDate`
-    - Relationships
-        - `books`
-        - `countries`
-- Books
-    - Attributes:
-        - `name`
-        - `copiesSold`
-    - Relationships
-        - `authors`
-- Countries
-    - Attributes:
-        - `code`
-- Authors
-    - Attributes:
-        - `fullName`
-        
-The API endpoint that you will need for most of the tasks is: `http://localhost:3000/stores`. This endpoint will return all store resources and related resources within `included` array.
-If you need any other endpint, check the JSON:API specification. 
+Each feature has its main entry point with its own index file for simpler importing.
+Besides that every feature has a types file, which mainly defines the feature's props and a module SCSS file which is imported by the feature for CSS class context.
+I've added some simple, non-comprehensive snapshot tests with enzyme for a basic test coverage.
 
-#### Running API:
-- Clone this repo locally
-- `cd` inside `book-store-api` folder and run `npm install`
-- Serve it on the port 3000 by running `npm run start`
+### Global Types, Helpers and Libs
 
-#### Commiting:
-- Please do not open pull requests against our repository!
-- Instead, create your own repository and send that over
+Some types and functionality which might be used by every feature are separated into [libs](book-store-frontend/src/libs/), [styles](book-store-frontend/src/styles/) and [types](/book-store-frontend/src/types/) respectively.
 
-#### Rules
-- You can choose between Backbone and React as your main framework.
-- The project startup procedure must be documented.
-- Javascript should be written in ES6 or above.
-- GIT history must be clean.
-- Application presentation must be done by responsive web design principles.
-- Write CSS from scratch, please do not use Bootstrap and similar.
+### Known Issues
 
-#### Happy coding and thank you for applying to Squirro!
+#### Deviation from the Requirements
 
-                
+- I've decided to keep the store images as a square with slightly rounded corners instead of making them circle-like, simply because it looked much better to me.
+- The web service under https://restcountries.eu was always unreachable for me, that's why I used https://countryflagsapi.com instead.
 
+#### Rating Updates via PATCH not working
 
-
-
-
+Somehow I just didn't get the PATCH request to the API for rating updates to work, even though something like that should be possible [according fake-json-api-server's tests](https://github.com/dbrekalo/fake-json-api-server/blob/master/test/index.js#L120).
+I tried several different approaches for the data structure but to no avail, so I chose to stick to the method and structure [defined by JSON:API specifications](https://jsonapi.org/format/#crud-updating) and leave it at that.

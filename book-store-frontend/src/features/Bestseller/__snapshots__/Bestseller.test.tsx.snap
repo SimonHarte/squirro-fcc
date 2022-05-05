@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Bestseller should render correctly 1`] = `
+<div
+  className="wrapper"
+>
+  <table
+    className="table"
+  >
+    <caption
+      className="caption"
+    >
+      Best-selling books
+    </caption>
+    <tbody>
+      <tr
+        className="row"
+        key="Book 1"
+      >
+        <td
+          className="cell book"
+        >
+          Book 1
+        </td>
+        <td
+          className="cell author"
+        >
+          Author 1
+        </td>
+      </tr>
+      <tr
+        className="row"
+        key="Book 2"
+      >
+        <td
+          className="cell book"
+        >
+          Book 2
+        </td>
+        <td
+          className="cell author"
+        >
+          Author 2
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Bestseller should render correctly without data 1`] = `
+<div
+  className="wrapper"
+>
+  <table
+    className="table"
+  >
+    <caption
+      className="caption"
+    >
+      Best-selling books
+    </caption>
+    <tbody>
+      <tr
+        className="row"
+      >
+        <td
+          className="cell"
+        >
+          No data available
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
